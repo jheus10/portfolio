@@ -1,0 +1,545 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap"); */
+@font-face {
+  font-family: Manokwary;
+  src: url(font/Manokwary.ttf);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --body-color: #060714;
+  --name-color: #d9dbf6;
+  --position-color: #6885a5;
+  --accent-color: #0bf7e3;
+  --body-font: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--body-color);
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.my_name_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.my_name_card > .name-transparent {
+  position: relative;
+  font-family: "Manokwary";
+  width: 1000px;
+  height: 150px;
+  text-align: center;
+  font-size: clamp(3rem, 5rem, 6rem);
+  background-position: 50%;
+  transition: all 0.07s cubic-bezier(0.2, 0.1, 0.22, 1);
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    #0bf7e380 100%,
+    var(--body-color) 100%
+  );
+  border-radius: 50%;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 0.15s;
+  color: transparent;
+}
+.my_name_card > .name {
+  position: absolute;
+  font-family: "Manokwary";
+  max-width: 1000px;
+  pointer-events: none;
+  min-height: 150px;
+  text-align: center;
+  color: var(--name-color);
+  font-size: clamp(1rem, 5rem, 6rem);
+  translate: 0px -74px;
+  font-weight: 400;
+}
+
+.my_name_card > .position {
+  color: var(--position-color);
+  font-size: 1.5rem;
+  font-family: var(--body-font);
+  font-weight: 300;
+  max-width: 100%;
+  min-height: 69px;
+  text-align: center;
+  background-color: var(--body-color);
+  translate: 0 -10px;
+}
+.my_name_card > button {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  font-family: var(--body-font);
+  font-weight: 300;
+  border-color: var(--accent-color);
+  background-color: var(--body-color);
+  border-radius: 8px;
+  min-width: 129px;
+  min-height: 51px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 32px;
+  transition: 0.2s;
+}
+.my_name_card > button:hover {
+  background-color: var(--accent-color);
+  color: var(--body-color);
+  transition: 0.3s;
+}
+.navbar {
+  position: absolute;
+
+  width: 100%;
+}
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5.4rem;
+  padding: 40px;
+  list-style-type: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #6885a5;
+  position: relative;
+  padding: 16px;
+  font-family: var(--body-font);
+  font-weight: 300;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.nav-link:before {
+  transition: 400ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--name-color);
+}
+.active::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent-color);
+  left: 0;
+  bottom: 10px;
+  border-radius: 2px;
+}
+.contact-me-icons {
+  position: fixed;
+  width: 30px;
+  height: 260px;
+  left: 50px;
+  top: 550px;
+}
+
+.contact-me-icons ul li a:link,
+.contact-me-icons ul li a:visited,
+.contact-me-icons ul li a:active {
+  color: var(--body-color);
+}
+.contact-me-icons ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-decoration: none;
+  list-style: none;
+  font-weight: 600;
+}
+.resume:after {
+  transition: 400ms;
+  height: 2px;
+
+  position: absolute;
+  background-color: var(--accent-color);
+}
+.resume::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 0%;
+  height: 30px;
+  content: "";
+  font-size: 0rem;
+}
+
+.resume:hover::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 500%;
+  height: 30px;
+  content: "Visit my resume!";
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+  border-top-right-radius: 10px;
+}
+
+.github:after {
+  transition: 400ms;
+  height: 2px;
+
+  position: absolute;
+  background-color: var(--accent-color);
+}
+.github::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 0%;
+  height: 30px;
+  content: "";
+  font-size: 0rem;
+}
+
+.github:hover::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 400%;
+  height: 30px;
+  content: "/jheus10/";
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+  border-top-right-radius: 10px;
+}
+
+.facebook:after {
+  transition: 400ms;
+  height: 2px;
+
+  position: absolute;
+  background-color: var(--accent-color);
+}
+.facebook::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 0%;
+  height: 30px;
+  content: "";
+  font-size: 0rem;
+}
+
+.facebook:hover::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 400%;
+  height: 30px;
+  content: "/jheus10/";
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+  border-top-right-radius: 10px;
+}
+
+.gmail:after {
+  transition: 400ms;
+  height: 2px;
+  position: absolute;
+  background-color: var(--accent-color);
+}
+.gmail::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 0%;
+  height: 30px;
+  content: "";
+  font-size: 0rem;
+}
+
+.gmail:hover::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 800%;
+  height: 30px;
+  content: attr(data-text);
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+  border-top-right-radius: 10px;
+}
+
+.twitter:after {
+  transition: 400ms;
+  height: 2px;
+
+  position: absolute;
+  background-color: var(--accent-color);
+}
+.twitter::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 0%;
+  height: 30px;
+  content: "";
+  font-size: 0rem;
+}
+
+.twitter:hover::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 500%;
+  height: 30px;
+  content: "@jheus_lavilla";
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+  border-top-right-radius: 10px;
+}
+
+.linkedin:after {
+  transition: 400ms;
+  height: 2px;
+  position: absolute;
+  background-color: var(--accent-color);
+}
+.linkedin::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 0%;
+  height: 30px;
+  content: "";
+  font-size: 0rem;
+}
+
+.linkedin:hover::after {
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 800%;
+  height: 30px;
+  content: "/jheus-lavilla-4a07171a3/";
+  font-family: var(--body-font);
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.arrow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  z-index: 1;
+  transform: translateY(0);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 750ms ease-in-out;
+  -ms-transition: all 750ms ease-in-out;
+  -o-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+  color: var(--position-color);
+  cursor: pointer;
+  left: 49%;
+  bottom: 50px;
+}
+
+/* this sets the position of the arrow when it's up, so it will move up or down by 14px when you add or remove this class */
+.lift {
+  transform: translateY(14px);
+}
+.about-me-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  font-size: 1.5rem;
+  font-family: var(--body-font);
+  color: var(--position-color);
+  max-width: 842px;
+  max-height: 298px;
+  text-align: center;
+  font-weight: 300;
+}
+.start-tag-about::before {
+  content: "<about>";
+  color: var(--accent-color);
+  font-weight: 400;
+}
+.close-tag-about::before {
+  content: "</about>";
+  color: var(--accent-color);
+  font-weight: 400;
+}
+@media only screen and (max-width: 1100px) {
+  .my_name_card > .name {
+    display: none;
+  }
+  .my_name_card > .name-transparent {
+    color: var(--name-color);
+    width: 100%;
+    border-radius: 0;
+  }
+  .navbar .nav-menu {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .contact-me-icons {
+    top: 500px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -115%;
+    top: 5rem;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .nav-menu.active {
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .contact-me-icons {
+    display: none;
+  }
+  .hamburger.active::after {
+    display: none;
+  }
+  .nav-menu.active::after {
+    display: none;
+  }
+  .nav-link-ltr.active::after {
+    background-color: var(--body-color);
+  }
+  .about-me {
+    margin: 0px 100px 0px 100px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .my_name_card {
+    position: relative;
+    width: 100%;
+  }
+  .my_name_card > .name-transparent {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 4rem;
+    padding: 40px;
+  }
+  .my_name_card > .position {
+    width: 100%;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .arrow-wrapper {
+    display: none;
+  }
+  .my_name_card {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .my_name_card > .position {
+    font-size: 1rem;
+  }
+  .about-me {
+    margin: 0px 50px 0px 50px;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .nav-menu {
+    display: block !important;
+  }
+}
