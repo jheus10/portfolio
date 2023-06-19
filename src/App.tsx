@@ -176,6 +176,7 @@ function App() {
             title={"Roadcast"}
             roles={['Full Stack Developer', 'Project Manager']}
             description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
+            skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
             image1={RoadcastImage1}
             image2={RoadcastImage2}>
           </Project>

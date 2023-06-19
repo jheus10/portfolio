@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class ProjectOutline extends Component {
 
   render() {
-    const { number, title,roles, description, image1, image2 } = this.props;
+    const { number, title,roles, description, skills, image1, image2 } = this.props;
     return (
         <div className='project-item'>
         <h2 className='project-index'>{number}</h2>
@@ -15,7 +15,8 @@ export class ProjectOutline extends Component {
                 {index !== roles.length - 1 && <span className='role-separator'></span>}
               </React.Fragment>
             ))}</p>
-        <p>{description}</p>
+        <p className='project-description'>{description}</p>
+        <p className='skills-needed'>{skills.join(', ')}</p>
         </div>
         <div className='project-images'>
         <img className="laptop-image-1" src={image1} alt="Project Image 1" />
