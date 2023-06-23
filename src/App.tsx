@@ -1,17 +1,27 @@
 //import React from 'react';
 
 import './App.css';
+import './Projects.css';
 import CopyEmail from './components/CopyEmail.jsx';
 import ArrowLiftStatus from './components/ArrowLiftStatus.jsx';
 import Project from './components/ProjectOutline.jsx';
+import { useTypewriter } from 'react-simple-typewriter';
+
 import RoadcastImage1 from './assets/roadcast1.png';
 import RoadcastImage2 from './assets/roadcast2.png';
+import PollarImage1 from './assets/pollar.png';
+import PollarImage2 from './assets/pollar-2.png';
 function App() {
-
+  const [myRole] = useTypewriter({
+    words: ['Software Engineer', 'Full-stack Developer', 'Software Developer', 'Data Analyst'],
+    loop: {},
+  });
   const aboutMeUrl = () => {
     window.location.href = '#about-me';
   };
+
   return (
+
     <>
 
       <header className="header">
@@ -24,7 +34,7 @@ function App() {
               <a href="#" className="nav-link nav-link-ltr">Projects</a>
             </li>
             <li className="nav-item">
-              <a href="#" className="nav-link nav-link-ltr">Publications</a>
+              <a href="#" className="nav-link nav-link-ltr">Skills</a>
             </li>
             <li className="nav-item">
               <a href="#" className="nav-link nav-link-ltr">Certifications</a>
@@ -45,7 +55,7 @@ function App() {
           <div className="my_name_card">
             <div className="name">Jheus Brian Lavilla</div>
             <div className="name-transparent">Jheus Brian Lavilla</div>
-            <div className="position">Software Engineer & Full-stack Developer</div>
+            <div className="position" >I'm a <span style={{ fontWeight: "Bold", }}>{myRole}</span></div>
             <button className="button" onClick={aboutMeUrl}>
               Know About Me!
             </button>
@@ -168,9 +178,10 @@ function App() {
           <div className="close-tag-about"></div>
         </div>
       </section>
+      <div className="start-tag-projects"></div>
       <section className="projects-wrapper" id="projects">
         <div className="projects">
-          <div className="start-tag-projects"></div>
+
           <Project
             number={'01'}
             title={"Roadcast"}
@@ -180,7 +191,60 @@ function App() {
             image1={RoadcastImage1}
             image2={RoadcastImage2}>
           </Project>
+        </div>
+      </section>
+      <section className="projects-wrapper" id="projects">
+        <div className="projects">
+          <Project
+            number={'02'}
+            title={"Roadcast"}
+            roles={['Full Stack Developer', 'Project Manager']}
+            description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
+            skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
+            image1={PollarImage1}
+            image2={PollarImage2}>
+          </Project>
+        </div>
+      </section>
+      <section className="projects-wrapper" id="projects">
+        <div className="projects">
+          <Project
+            number={'03'}
+            title={"Roadcast"}
+            roles={['Full Stack Developer', 'Project Manager']}
+            description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
+            skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
+            image1={RoadcastImage1}
+            image2={RoadcastImage2}>
+          </Project>
+        </div>
+      </section>
+      <section className="projects-wrapper" id="projects">
+        <div className="projects">
+          <Project
+            number={'04'}
+            title={"Roadcast"}
+            roles={['Full Stack Developer', 'Project Manager']}
+            description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
+            skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
+            image1={RoadcastImage1}
+            image2={RoadcastImage2}>
+          </Project>
+        </div>
+      </section>
+      <section className="projects-wrapper" id="projects">
+        <div className="projects">
+          <Project
+            number={'05'}
+            title={"Roadcast"}
+            roles={['Full Stack Developer', 'Project Manager']}
+            description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
+            skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
+            image1={RoadcastImage1}
+            image2={RoadcastImage2}>
+          </Project>
           <div className="close-tag-projects"></div>
+
         </div>
       </section>
     </>

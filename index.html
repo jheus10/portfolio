@@ -4,10 +4,34 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Jheus Lavilla Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/components/main.jsx"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+      $(window)
+        .scroll(function () {
+          let $window = $(window),
+            $body = $("body"),
+            $section = $(".project-item");
+          let scroll = $window.scrollTop() + $window.height() / 3;
+          $section.each(function () {
+            if (
+              $(this).position().top <= scroll &&
+              $(this).position().top + $(this).height() > scroll
+            ) {
+              $body.removeClass(function (index, css) {
+                return css.match(/(^|\s)color-\s+/g) || [].join(" ");
+              });
+              $(".project-item").removeClass("active");
+              $(this).addClass("active");
+            }
+          });
+        })
+        .scroll();
+    </script>
   </body>
 </html>
