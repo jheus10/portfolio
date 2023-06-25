@@ -436,25 +436,7 @@ body {
   text-align: center;
   font-weight: 300;
 }
-.projects-wrapper {
-  height: 100vh;
-}
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-family: var(--body-font);
-  color: var(--position-color);
-  width: 100%;
-  height: auto;
-  text-align: center;
-  font-weight: 300;
 
-  background-color: var(--body-color);
-  gap: 500px;
-}
 .start-tag-about::before {
   content: "<about>";
   color: var(--accent-color);
@@ -464,88 +446,6 @@ body {
   content: "</about>";
   color: var(--accent-color);
   font-weight: 400;
-}
-.start-tag-projects::before {
-  content: "<projects>";
-  color: var(--accent-color);
-  font-weight: 400;
-}
-.start-tag-projects,
-.close-tag-projects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-.close-tag-projects::before {
-  content: "</projects>";
-  color: var(--accent-color);
-  font-weight: 400;
-}
-
-.project-item {
-  display: flex;
-  max-width: 100%;
-  margin: 0 80px 0 150px;
-}
-.project-texts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-}
-.project-images {
-  display: flex;
-  flex-direction: column;
-}
-.project-index {
-  position: absolute;
-  left: 55px;
-  font-family: Roboto-Bold;
-  text-align: left;
-}
-.project-title {
-  font-size: 3em;
-  margin-bottom: 50px;
-  font-family: Roboto-Bold;
-  color: var(--name-color);
-}
-.project-roles {
-  display: flex;
-  align-items: center;
-  color: #ffff;
-  margin-bottom: 30px;
-  font-family: Roboto-Regular;
-  font-size: 1.125em;
-  color: var(--position-color);
-}
-.project-description {
-  color: #ffff;
-  font-family: Roboto-Light;
-  font-size: 1.5em;
-  color: var(--position-color);
-  margin-bottom: 30px;
-}
-.role-separator {
-  margin: 0 5px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-  margin: 15px;
-}
-
-.project-index,
-.project-title {
-  color: #ffff;
-  font-weight: bold;
-  font-size: 2em;
-}
-.skills-needed {
-  font-size: 0.875em;
-  color: #fff;
 }
 
 @media only screen and (max-width: 1100px) {

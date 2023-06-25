@@ -188,8 +188,8 @@ function App() {
             roles={['Full Stack Developer', 'Project Manager']}
             description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
             skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
-            image1={RoadcastImage1}
-            image2={RoadcastImage2}>
+            images={[RoadcastImage1, RoadcastImage2, RoadcastImage1, RoadcastImage2]}
+          >
           </Project>
         </div>
       </section>
@@ -201,8 +201,8 @@ function App() {
             roles={['Full Stack Developer', 'Project Manager']}
             description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
             skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
-            image1={PollarImage1}
-            image2={PollarImage2}>
+            images={[RoadcastImage1, RoadcastImage2, RoadcastImage1, RoadcastImage2]}
+          >
           </Project>
         </div>
       </section>
@@ -214,8 +214,8 @@ function App() {
             roles={['Full Stack Developer', 'Project Manager']}
             description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
             skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
-            image1={RoadcastImage1}
-            image2={RoadcastImage2}>
+            images={[RoadcastImage1, RoadcastImage2, RoadcastImage1, RoadcastImage2]}
+          >
           </Project>
         </div>
       </section>
@@ -227,8 +227,8 @@ function App() {
             roles={['Full Stack Developer', 'Project Manager']}
             description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
             skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
-            image1={RoadcastImage1}
-            image2={RoadcastImage2}>
+            images={[RoadcastImage1, RoadcastImage2, RoadcastImage1, RoadcastImage2]}
+          >
           </Project>
         </div>
       </section>
@@ -240,8 +240,8 @@ function App() {
             roles={['Full Stack Developer', 'Project Manager']}
             description={`A Vehicle Incident Management System and Forecasting Implementing Moving Average Web Application for Philippine National Police (PNP) Headquarters of Pasig City.`}
             skills={['Python', 'Django', 'HTML5', 'CSS3', 'JavaScript', 'MySQL', 'Data Analysis']}
-            image1={RoadcastImage1}
-            image2={RoadcastImage2}>
+            images={[RoadcastImage1, RoadcastImage2, RoadcastImage1, RoadcastImage2]}
+          >
           </Project>
           <div className="close-tag-projects"></div>
 

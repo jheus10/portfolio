@@ -1,3 +1,22 @@
+.projects-wrapper {
+  height: 100vh;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: var(--body-font);
+  color: var(--position-color);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: 300;
+
+  background-color: var(--body-color);
+  gap: 500px;
+}
 .project-item {
   display: flex;
   min-height: 100vh;
@@ -10,11 +29,11 @@
 .project-images {
   position: relative;
   display: flex;
+  margin: auto;
 }
-.laptop-image-1,
-.laptop-image-2 {
-  position: fixed;
-  right: 5%;
+
+.project-texts {
+  left: 5%;
   width: 40%;
   top: 0;
   mix-blend-mode: multiply;
@@ -26,31 +45,131 @@
   background-position: 50% 40%;
   transition: 0.6s ease, opacity 0.6s ease, background-position 0.8s ease;
 }
-.laptop-image-1 {
-  height: 637px;
-  width: 821px;
-  translate: -30px -30px;
-  z-index: 1;
-}
-.laptop-image-2 {
-  translate: 100px 100px;
-  height: 737px;
-  width: 921px;
-}
+
 .section-body {
   display: flex;
   align-items: center;
 }
 .project-texts {
+  position: fixed;
   padding: 5vw;
 }
-.project-item.active .laptop-image-1 {
+.project-item.active .project-texts {
   opacity: 1;
   background-position: 50% 50%;
   filter: blur(0);
 }
-.project-item.active .laptop-image-2 {
+.project-item.active .project-texts {
   opacity: 1;
   background-position: 50% 50%;
   filter: blur(0);
+}
+.start-tag-projects::before {
+  content: "<projects>";
+  color: var(--accent-color);
+  font-weight: 400;
+}
+.start-tag-projects,
+.close-tag-projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+.close-tag-projects::before {
+  content: "</projects>";
+  color: var(--accent-color);
+  font-weight: 400;
+}
+
+.project-item {
+  display: flex;
+  max-width: 100%;
+  margin: 0 80px 100px 150px;
+}
+.project-texts {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+.project-images {
+  display: flex;
+  flex-direction: column;
+}
+.project-index {
+  position: absolute;
+  left: -30px;
+  font-family: Roboto-Bold;
+  text-align: left;
+  top: 3%;
+}
+.project-title {
+  font-size: 3em;
+  margin-bottom: 50px;
+  font-family: Roboto-Bold;
+  color: var(--name-color);
+}
+.project-roles {
+  display: flex;
+  align-items: center;
+  color: #ffff;
+  margin-bottom: 30px;
+  font-family: Roboto-Regular;
+  font-size: 1.125em;
+  color: var(--position-color);
+}
+.project-description {
+  color: #ffff;
+  font-family: Roboto-Light;
+  font-size: 1.5em;
+  color: var(--position-color);
+  margin-bottom: 30px;
+}
+.role-separator {
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  margin: 15px;
+}
+
+.project-index,
+.project-title {
+  color: #ffff;
+  font-weight: bold;
+  font-size: 2em;
+}
+.skills-needed {
+  font-size: 0.875em;
+  color: #fff;
+}
+.project-images {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  max-height: 100vh; /* Set a maximum height for the scrollable container */
+}
+
+.project-images img {
+  width: 100%; /* Ensure images fill the container width */
+  height: auto; /* Preserve aspect ratio */
+  margin-bottom: 20px; /* Add some spacing between images */
+}
+
+.project-images::-webkit-scrollbar {
+  width: 0.5em; /* Adjust the width of the scrollbar */
+}
+
+.project-images::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the background color of the scrollbar track */
+}
+
+.project-images::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Set the color of the scrollbar thumb */
 }

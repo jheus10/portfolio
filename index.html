@@ -17,7 +17,9 @@
           let $window = $(window),
             $body = $("body"),
             $section = $(".project-item");
+          var $target = $(".about-me-wrapper"); // Replace ".your-target-div" with the selector for your target div
           let scroll = $window.scrollTop() + $window.height() / 3;
+
           $section.each(function () {
             if (
               $(this).position().top <= scroll &&
@@ -30,6 +32,11 @@
               $(this).addClass("active");
             }
           });
+          // Check if the scroll position exceeds the target div's offset
+          if (scroll <= 2786.6666666666665 || scroll >= 6881.666666666667) {
+            $(".project-item").removeClass("active");
+          }
+          console.log(scroll);
         })
         .scroll();
     </script>

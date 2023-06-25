@@ -22,14 +22,15 @@ export class ProjectOutline extends Component {
     });
   }
   render() {
-    const { number, title, roles, description, skills, image1, image2 } = this.props;
+    const { number, title, roles, description, skills, images } = this.props;
     return (
 
 
       <div className='project-item'>
-        <h2 className='project-index'>{number}</h2>
+
         <div class="section-body">
           <div className='project-texts'>
+            <h2 className='project-index'>{number}</h2>
             <h3 className='project-title'>{title}</h3>
             <p className='project-roles'>{roles.map((role, index) => (
               <React.Fragment key={index}>
@@ -42,8 +43,14 @@ export class ProjectOutline extends Component {
           </div>
         </div>
         <div className='project-images'>
-          <img className="laptop-image-1" src={image1} alt="Project Image 1" />
-          <img className="laptop-image-2" src={image2} alt="Project Image 2" />
+          {images.map((image, index) => (
+            <img
+              key={index}
+              className={`laptop-image-${index + 1}`}
+              src={image}
+              alt={`Project Image ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
 
